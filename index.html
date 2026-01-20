@@ -1,51 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>For You ❤️</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="bgMusic" loop>
+      <source src="Zdravko.mp3" type="audio/mpeg" />
+    </audio>
 
-<!-- Music from YouTube Link -->
-<iframe width="0" height="0" 
-src="https://www.youtube.com/embed/y7KYdqVND4o?autoplay=1&loop=1&playlist=y7KYdqVND4o" 
-frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+    <div class="stars"></div>
 
-<div class="stars"></div>
-<div class="container">
-  <h1>Happy Birthday, My Love 🎂</h1>
-  <p class="subtitle">Under the same sky, even miles apart 🌌</p>
+    <div class="container">
+      <h1>Happy Birthday, My Love 🎂</h1>
+      <p class="subtitle">Under the same sky, even miles apart 🌌</p>
 
-  <button id="startBtn">Tap to Begin 💖</button>
+      <button id="startBtn">Tap to Begin 💖</button>
 
-  <div id="letter" class="hidden">
-    <h2>My Letter to You 💌</h2>
-    <p>
-      Even though we are far apart, you are the closest person to my heart.
-      Every day with you feels special, but today is special because **YOU** were born.
-      <br><br>
-      I promise you love, patience, loyalty, and a future where distance
-      is just a story we tell.
-    </p>
-    <button id="nextBtn">One More Thing ✨</button>
-  </div>
+      <div id="letter" class="section">
+        <h2>My Letter to You 💌</h2>
+        <p>
+          Even though we are far apart, you are the closest person to my heart.
+          Every day with you feels special, but today is special because
+          <strong>YOU</strong> were born. <br /><br />
+          Love that burns loud, patience that bleeds quiet, loyalty that refuses to leave — 
+          and a future stitched together across every mile.
+        </p>
+        <button id="nextBtn">One More Thing ✨</button>
+      </div>
 
-  <div id="proposal" class="hidden">
-    <h2>One Question 💍</h2>
-    <p>Would you let me be yours forever?</p>
-    <button id="yesBtn">Yes ❤️</button>
-    <button id="noBtn">No 💔</button>
-  </div>
+      <div id="proposal" class="section">
+        <h2>One Question 💍</h2>
+        <p>Would you let me be yours forever?</p>
+        <button id="yesBtn">Yes ❤️</button>
+        <button id="noBtn">No 💔</button>
+      </div>
 
-  <p id="serbianSecret" class="hidden">
-    Ako razumeš ovo, onda znaš koliko te volim.
-    Ti si moja sreća, moja sudbina, moje sve. ❤️
-  </p>
-</div>
+      <p id="serbianSecret" class="section">
+        Ako razumeš ovo, onda znaš koliko te volim. Ti si moja sreća, moja
+        sudbina, moje sve. ❤️
+      </p>
+    </div>
 
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

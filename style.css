@@ -2,62 +2,55 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  height: 100vh;
-  background: radial-gradient(circle at bottom, #020111, #000);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0b1d3a, #000);
   color: white;
-}
-
-.stars::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: url("https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/img/stars.png");
-  animation: moveStars 200s linear infinite;
-}
-
-@keyframes moveStars {
-  from { transform: translate(0, 0); }
-  to { transform: translate(-500px, 500px); }
+  overflow: hidden;
 }
 
 .container {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(12px);
-  padding: 30px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 420px;
   text-align: center;
+  max-width: 600px;
+  margin: auto;
+  padding-top: 15vh;
 }
 
 .subtitle {
-  margin: 15px 0 25px;
+  opacity: 0.8;
+  margin-bottom: 20px;
 }
 
 button {
-  padding: 12px 22px;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
   border: none;
   border-radius: 25px;
-  margin: 10px;
   cursor: pointer;
-  font-size: 1rem;
+  background: #ff4d6d;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.hidden {
-  display: none;
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.6);
 }
 
-#serbianSecret {
-  margin-top: 20px;
-  color: #ffb3ff;
-  font-style: italic;
+/* SECTION ANIMATION SYSTEM */
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
